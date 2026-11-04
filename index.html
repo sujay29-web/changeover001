@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changeover Fitness Studio | Best Gym in Vijayanagar, Bengaluru — Cult.fit</title>
+<meta name="description" content="Changeover Fitness Studio on Cult.fit — 4.5★ (395 reviews). Spacious gym in Vijayanagar with modern equipment, cardio & strength zones, personal training, HIIT, Kickboxing & more. Open till 10:30 PM.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:'#08080A',
+        panel:'#131316',
+        panel2:'#1B1B1F',
+        lime:'#D6FF2A',
+        lime2:'#B8E600',
+        blaze:'#FF4D00',
+        muted:'#A1A1AA',
+      },
+      fontFamily: {
+        display:['Anton','sans-serif'],
+        oswald:['Oswald','sans-serif'],
+        inter:['Inter','sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+*{ -webkit-tap-highlight-color:transparent; }
+html{scroll-behavior:smooth}
+body{background:#08080A;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
+::selection{background:#D6FF2A;color:#000}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#0a0a0b}
+::-webkit-scrollbar-thumb{background:linear-gradient(#D6FF2A,#FF4D00);border-radius:20px}
+.font-display{font-family:Anton,sans-serif;letter-spacing:.02em}
+.stroke-text{-webkit-text-stroke:1.5px rgba(255,255,255,.22);color:transparent}
+.stroke-lime{-webkit-text-stroke:1.5px #D6FF2A;color:transparent}
+.grain:after{content:'';position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grad{background:radial-gradient(900px 500px at 70% 20%, rgba(214,255,42,.18), transparent 60%), radial-gradient(700px 500px at 15% 80%, rgba(255,77,0,.22), transparent 60%), linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.78) 65%, #08080A 100%)}
+.marquee-track{display:flex;width:max-content;animation:marq 22s linear infinite}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marquee-track:hover{animation-play-state:paused}
+.card-glow{position:relative}
+.card-glow:before{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(214,255,42,.6),rgba(255,255,255,.08),rgba(255,77,0,.6));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.btn-lime{background:#D6FF2A;color:#000;transition:.3s}
+.btn-lime:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(214,255,42,.35)}
+.btn-ghost{border:1px solid rgba(255,255,255,.18);transition:.3s}
+.btn-ghost:hover{border-color:#D6FF2A;color:#D6FF2A;transform:translateY(-2px)}
+.chip{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+.tilt{transform-style:preserve-3d;transition:transform .2s ease}
+.glass{background:rgba(19,19,22,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.tab-active{background:#D6FF2A!important;color:#000!important;border-color:#D6FF2A!important}
+.gallery-item{break-inside:avoid}
+input,select,textarea{color-scheme:dark}
+.field{background:#0F0F12;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:13px 15px;width:100%;outline:none;transition:.25s;font-size:14px}
+.field:focus{border-color:#D6FF2A;box-shadow:0 0 0 3px rgba(214,255,42,.15);background:#121216}
+.dot-live{position:relative}
+.dot-live:after{content:'';position:absolute;inset:-4px;border-radius:9999px;border:2px solid #22c55e;animation:ping2 1.6s ease-out infinite}
+@keyframes ping2{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.review-bar{height:8px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.review-bar>div{height:100%;border-radius:99px;background:linear-gradient(90deg,#D6FF2A,#FF4D00)}
+.before-after{position:relative;overflow:hidden;user-select:none}
+.before-after img{pointer-events:none}
+.ba-handle{position:absolute;top:0;bottom:0;width:2px;background:#D6FF2A;z-index:5}
+.ba-knob{position:absolute;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#D6FF2A;color:#000;display:flex;align-items:center;justify-content:center;font-weight:800;z-index:6;box-shadow:0 8px 30px rgba(0,0,0,.5);cursor:ew-resize}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.acc-open .acc-body{max-height:300px}
+.acc-open .acc-icon{transform:rotate(45deg);background:#D6FF2A;color:#000}
+.acc-icon{transition:.3s}
+#preloader{position:fixed;inset:0;z-index:100;background:#08080A;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s, visibility .6s}
+#preloader.hide{opacity:0;visibility:hidden}
+.loader-bar{width:260px;height:3px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin-top:18px}
+.loader-bar>div{height:100%;width:0;background:#D6FF2A}
+.float-anim{animation:floaty 5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.tick{font-variant-numeric:tabular-nums}
+.nav-blur.scrolled{background:rgba(8,8,10,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);z-index:95;transition:.45s cubic-bezier(.2,.9,.3,1.2)}
+.toast.show{transform:translate(-50%,0)}
+.schedule-row{transition:.25s}
+.schedule-row:hover{background:rgba(214,255,42,.07);transform:translateX(6px)}
+.price-pop{transform:scale(1.04)}
+@media(max-width:768px){.price-pop{transform:scale(1)}}
+.stars{color:#D6FF2A}
+canvas#particles{position:absolute;inset:0;pointer-events:none}
+.shine{position:relative;overflow:hidden}
+.shine:after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);animation:shine 3.5s infinite}
+@keyframes shine{0%{left:-80%}60%,100%{left:130%}}
+</style>
+</head>
+<body class="grain">
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="font-display text-4xl md:text-6xl tracking-wide">CHANGE<span class="text-lime">OVER</span></div>
+  <div class="text-xs tracking-[.35em] text-muted mt-2">VIJAYANAGAR • BENGALURU</div>
+  <div class="loader-bar"><div id="loadFill"></div></div>
+  <div id="loadPct" class="text-lime text-sm mt-3 font-bold tick">0%</div>
+</div>
+
+<!-- TOP INFO BAR -->
+<div class="bg-lime text-black text-[12px] md:text-[13px] font-semibold">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2 truncate"><span class="w-2 h-2 rounded-full bg-green-700 dot-live inline-block"></span><span id="topStatus" class="truncate">Open Now • Closes 10:30 PM • Vijayanagar</span></div>
+    <div class="hidden md:flex items-center gap-4">
+      <a href="tel:+917406699917" class="hover:underline flex items-center gap-1"><i class="fa-solid fa-phone"></i> 074066 99917</a>
+      <a href="https://cult.fit" target="_blank" class="bg-black text-lime px-3 py-1 rounded-full text-[11px] tracking-wider hover:bg-zinc-800">AVAILABLE ON CULT.FIT <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar" class="nav-blur sticky top-0 z-50 transition-all">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-2xl bg-lime flex items-center justify-center text-black font-display text-2xl rotate-3">C</div>
+      <div class="leading-none">
+        <div class="font-display text-xl tracking-wide">CHANGEOVER <span class="text-lime">FITNESS</span></div>
+        <div class="text-[10px] tracking-[.3em] text-muted">STUDIO • VIJAYANAGAR</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-7 text-[13px] font-semibold tracking-wide text-zinc-300">
+      <a href="#overview" class="hover:text-lime">OVERVIEW</a>
+      <a href="#services" class="hover:text-lime">SERVICES</a>
+      <a href="#trainers" class="hover:text-lime">COACHES</a>
+      <a href="#schedule" class="hover:text-lime">SCHEDULE</a>
+      <a href="#pricing" class="hover:text-lime">PRICING</a>
+      <a href="#photos" class="hover:text-lime">PHOTOS</a>
+      <a href="#reviews" class="hover:text-lime">REVIEWS</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="tel:+917406699917" class="hidden sm:flex btn-ghost rounded-full px-4 py-2 text-sm font-bold"><i class="fa-solid fa-phone mr-1 text-lime"></i> Call</a>
+      <button onclick="openBooking('Free Trial')" class="btn-lime rounded-full px-5 py-2.5 text-sm font-extrabold">BOOK FREE TRIAL <i class="fa-solid fa-bolt ml-1"></i></button>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-full chip flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 glass">
+    <div class="px-6 py-4 grid gap-3 text-sm font-bold tracking-wider">
+      <a href="#overview">OVERVIEW</a><a href="#services">SERVICES</a><a href="#trainers">COACHES</a><a href="#schedule">SCHEDULE</a><a href="#pricing">PRICING</a><a href="#photos">PHOTOS</a><a href="#reviews">REVIEWS</a><a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="relative min-h-[92vh] flex items-end overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" alt="Gym" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-grad"></div>
+  <canvas id="particles"></canvas>
+  <div class="absolute top-24 right-6 hidden xl:block float-anim">
+    <div class="glass rounded-2xl p-4 w-[230px] card-glow">
+      <div class="flex items-center gap-2"><div class="flex text-lime text-sm">★★★★★</div><span class="text-xs font-bold">4.5</span></div>
+      <div class="text-xs text-zinc-300 mt-1 font-semibold">395 Google Reviews</div>
+      <div class="mt-2 text-[11px] text-zinc-400 leading-snug">“Wide variety of modern equipment, spacious & clean…”</div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 pb-14 pt-28 w-full">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="bg-white/10 backdrop-blur border border-white/15 rounded-full px-3 py-1 text-[11px] font-bold tracking-widest"><i class="fa-solid fa-location-dot text-lime mr-1"></i> VIJAYANAGAR, BENGALURU • 500M</span>
+      <span class="bg-green-500/15 border border-green-400/30 text-green-300 rounded-full px-3 py-1 text-[11px] font-bold tracking-widest flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full dot-live"></span> <span id="heroStatus">OPEN • CLOSES 10:30 PM</span></span>
+      <span class="bg-lime text-black rounded-full px-3 py-1 text-[11px] font-extrabold tracking-widest">4.5 ★ (395) • CULT.FIT PARTNER</span>
+    </div>
+    <h1 class="font-display leading-[.9] text-[15vw] sm:text-7xl lg:text-[96px]">TRAIN HARD.<br><span class="text-lime">CHANGEOVER</span> <span class="stroke-text">STRONGER.</span></h1>
+    <p class="mt-4 max-w-xl text-zinc-300 text-[15px] md:text-base leading-relaxed">Bengaluru’s most spacious 2-floor strength + cardio arena in Vijayanagar — modern machines, dedicated weightlifting zone, HIIT, Kickboxing, Cycling & personal transformation coaching.</p>
+
+    <!-- Google action row replica -->
+    <div class="mt-6 flex flex-wrap gap-2">
+      <a href="tel:+917406699917" class="bg-lime text-black font-extrabold rounded-full px-5 py-3 text-sm flex items-center gap-2 hover:bg-white transition"><i class="fa-solid fa-phone"></i> Call</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Changeover+Fitness+Studio+RR+Plaza+KHB+Colony+Vijayanagar+Bengaluru+560040" target="_blank" class="btn-ghost bg-white/5 backdrop-blur rounded-full px-5 py-3 text-sm font-bold flex items-center gap-2"><i class="fa-solid fa-diamond-turn-right text-lime"></i> Directions</a>
+      <a href="https://cult.fit" target="_blank" class="btn-ghost bg-white/5 backdrop-blur rounded-full px-5 py-3 text-sm font-bold flex items-center gap-2"><i class="fa-solid fa-globe text-lime"></i> Website</a>
+      <button onclick="sharePlace()" class="btn-ghost bg-white/5 backdrop-blur rounded-full px-5 py-3 text-sm font-bold"><i class="fa-solid fa-share-nodes text-lime mr-1"></i> Share</button>
+      <button id="saveBtn" onclick="toggleSave()" class="btn-ghost bg-white/5 backdrop-blur rounded-full px-5 py-3 text-sm font-bold"><i class="fa-regular fa-bookmark text-lime mr-1"></i> <span id="saveTxt">Save</span></button>
+    </div>
+
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
+      <div class="glass rounded-2xl p-4 card-glow"><div class="font-display text-3xl text-lime tick"><span class="counter" data-target="4500">0</span>+</div><div class="text-[11px] tracking-widest text-muted font-bold">SQ.FT SPACIOUS FLOORS</div></div>
+      <div class="glass rounded-2xl p-4 card-glow"><div class="font-display text-3xl text-lime tick"><span class="counter" data-target="80">0</span>+</div><div class="text-[11px] tracking-widest text-muted font-bold">MODERN MACHINES</div></div>
+      <div class="glass rounded-2xl p-4 card-glow"><div class="font-display text-3xl text-lime tick"><span class="counter" data-target="15">0</span>+</div><div class="text-[11px] tracking-widest text-muted font-bold">EXPERT COACHES</div></div>
+      <div class="glass rounded-2xl p-4 card-glow"><div class="font-display text-3xl text-lime tick"><span class="counter" data-target="2500">0</span>+</div><div class="text-[11px] tracking-widest text-muted font-bold">TRANSFORMATIONS</div></div>
+    </div>
+
+    <div class="mt-6 flex items-center gap-3 text-[12px] text-zinc-400">
+      <i class="fa-solid fa-shower text-lime"></i> Shower
+      <span class="opacity-30">•</span> <i class="fa-solid fa-video text-lime"></i> Online Classes
+      <span class="opacity-30">•</span> <i class="fa-solid fa-square-parking text-lime"></i> On-site Parking
+      <span class="opacity-30">•</span> <span class="hidden sm:inline">2nd & 3rd Floor, RR Plaza, opp. Old A2B</span>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-zinc-500 text-xs tracking-[.3em] animate-bounce">SCROLL</div>
+</header>
+
+<!-- MARQUEE -->
+<div class="bg-lime text-black py-3 overflow-hidden -rotate-1 scale-[1.02] border-y-4 border-black relative z-10">
+  <div class="marquee-track font-display text-xl md:text-2xl gap-8">
+    <div class="flex gap-8 pr-8" id="marq1"></div>
+    <div class="flex gap-8 pr-8" id="marq2"></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+  <div class="grid lg:grid-cols-2 gap-10 items-start">
+    <div class="reveal">
+      <div class="text-lime text-xs font-extrabold tracking-[.35em]">● OVERVIEW — 0:15 VIEW ALL</div>
+      <h2 class="font-display text-4xl md:text-6xl mt-3 leading-[.95]">SPACIOUS. MODERN.<br><span class="stroke-lime">BUILT TO SWEAT.</span></h2>
+      <p class="text-zinc-400 mt-5 leading-relaxed text-[15px]">Located at <b class="text-white">40/11, 2nd & 3rd Floor, RR Plaza, KHB Colony, 5th Main Road, Govindaraja Nagar, Vijayanagar, Bengaluru 560040</b> — opp. OLD A2B & Hanumanthu Palav. Dedicated cardio deck, heavy-duty weightlifting arena, functional turf & group studio.</p>
+      <div class="grid sm:grid-cols-3 gap-3 mt-6">
+        <div class="bg-panel border border-white/10 rounded-2xl p-4"><i class="fa-solid fa-dumbbell text-lime text-xl"></i><div class="font-bold text-sm mt-2">Strength Arena</div><div class="text-xs text-muted mt-1">Plate-loaded, racks, dumbbells to 50kg</div></div>
+        <div class="bg-panel border border-white/10 rounded-2xl p-4"><i class="fa-solid fa-heart-pulse text-lime text-xl"></i><div class="font-bold text-sm mt-2">Cardio Deck</div><div class="text-xs text-muted mt-1">Treadmills, cycles, ellipticals, rowers</div></div>
+        <div class="bg-panel border border-white/10 rounded-2xl p-4"><i class="fa-solid fa-people-group text-lime text-xl"></i><div class="font-bold text-sm mt-2">Group Studio</div><div class="text-xs text-muted mt-1">HIIT • Cycling • Kickboxing • Functional</div></div>
+      </div>
+      <div class="mt-6 bg-panel2 border border-white/10 rounded-2xl p-5 flex flex-col md:flex-row md:items-center gap-4 justify-between">
+        <div>
+          <div class="flex items-center gap-2 font-bold"><span id="openDot" class="w-3 h-3 rounded-full bg-green-400 dot-live"></span> <span id="openText">Open Now</span> <span class="text-muted font-normal text-sm">• Closes 10:30 PM</span></div>
+          <div class="text-xs text-muted mt-1">Mon–Sat: 5:30 AM – 10:30 PM • Sun: 7:00 AM – 12:00 PM</div>
+          <div id="hoursDetail" class="hidden text-xs text-zinc-300 mt-2 leading-relaxed">Mon 5:30AM-10:30PM<br>Tue 5:30AM-10:30PM<br>Wed 5:30AM-10:30PM<br>Thu 5:30AM-10:30PM<br>Fri 5:30AM-10:30PM<br>Sat 5:30AM-10:30PM<br>Sun 7AM-12PM</div>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="document.getElementById('hoursDetail').classList.toggle('hidden')" class="btn-ghost rounded-full px-4 py-2 text-xs font-bold">VIEW HOURS</button>
+          <button onclick="openBooking('Appointment')" class="btn-lime rounded-full px-5 py-2 text-xs font-extrabold">MAKE APPOINTMENT</button>
+        </div>
+      </div>
+    </div>
+    <div class="relative reveal">
+      <div class="grid grid-cols-2 gap-3">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop" class="rounded-2xl h-64 w-full object-cover tilt" alt="training">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" class="rounded-2xl h-64 w-full object-cover mt-8 tilt" alt="weights">
+        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" class="rounded-2xl h-64 w-full object-cover -mt-8 tilt" alt="woman workout">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" class="rounded-2xl h-64 w-full object-cover tilt" alt="gym">
+      </div>
+      <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 glass card-glow rounded-2xl px-6 py-4 flex items-center gap-4 w-[92%]">
+        <div class="w-12 h-12 rounded-full bg-lime text-black flex items-center justify-center text-xl"><i class="fa-solid fa-stopwatch"></i></div>
+        <div><div class="font-display text-lg leading-none">NEXT BATCH: HIIT BLAST — 6:30 PM</div><div class="text-xs text-muted">12 seats left • Coach Arjun • Studio Floor 3</div></div>
+        <button onclick="bookClass('HIIT BLAST — 6:30 PM')" class="ml-auto btn-lime rounded-full px-4 py-2 text-xs font-extrabold whitespace-nowrap">JOIN</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-panel border-y border-white/10 py-16 md:py-24 relative overflow-hidden">
+  <div class="absolute font-display text-[18vw] stroke-text opacity-20 top-0 left-0 whitespace-nowrap pointer-events-none">SERVICES • SERVICES</div>
+  <div class="max-w-7xl mx-auto px-4 relative">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+      <div><div class="text-lime text-xs font-extrabold tracking-[.35em]">● WHAT WE DO</div><h2 class="font-display text-4xl md:text-6xl mt-2">EVERY GOAL. <span class="text-lime">ONE ROOF.</span></h2></div>
+      <div class="flex gap-2">
+        <input id="serviceSearch" placeholder="Search: fat loss, yoga..." class="field !w-[220px] !rounded-full text-sm">
+        <button onclick="openBooking('Fitness Assessment')" class="btn-lime rounded-full px-5 py-3 text-xs font-extrabold whitespace-nowrap">FREE ASSESSMENT</button>
+      </div>
+    </div>
+    <div id="serviceGrid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+    <div class="mt-6 text-xs text-zinc-500">Services: Cycling, HIIT, Kickboxing, Nutrition Consulting, Personal Training, Body Building, Body Transformation, Cardio, Cross Functional, Fat Loss, Fitness Assessment, Functional, Muscle Building, Senior Citizens Fitness, Strength Training, Weight Gain / Loss Programs + Best Gym in Vijayanagar & Fitness Center Near Me.</div>
+  </div>
+</section>
+
+<!-- WHY / EXPERIENCE -->
+<section class="max-w-7xl mx-auto px-4 py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
+  <div class="relative reveal order-2 lg:order-1">
+    <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?q=80&w=1000&auto=format&fit=crop" class="rounded-3xl w-full h-[520px] object-cover" alt="ambience">
+    <div class="absolute top-4 left-4 bg-black/70 backdrop-blur rounded-full px-4 py-2 text-xs font-bold border border-white/15"><i class="fa-solid fa-volume-high text-lime mr-2"></i>AMBIENCE • CROWD • EQUIPMENT — 4.5★ RATED</div>
+    <div class="absolute bottom-4 left-4 right-4 glass rounded-2xl p-4 flex items-center gap-3">
+      <button id="playBtn" class="w-12 h-12 rounded-full bg-lime text-black flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-play"></i></button>
+      <div><div class="font-bold text-sm">Take the 0:15 gym tour</div><div class="text-xs text-muted">Spacious 2-floor walkthrough • Real crowd hours</div></div>
+      <div class="ml-auto hidden sm:flex gap-1 text-lime">★★★★★</div>
+    </div>
+    <video id="tourVideo" class="hidden absolute inset-0 w-full h-[520px] object-cover rounded-3xl" controls poster="https://images.unsplash.com/photo-1550345332-09e3ac987658?q=80&w=1000&auto=format&fit=crop"><source src="https://cdn.coverr.co/videos/coverr-lifting-weights-in-the-gym-5244/1080p.mp4" type="video/mp4"></video>
+  </div>
+  <div class="reveal order-1 lg:order-2">
+    <div class="text-lime text-xs font-extrabold tracking-[.35em]">● WHY CHANGEOVER</div>
+    <h2 class="font-display text-4xl md:text-5xl mt-2 leading-tight">AT PAR WITH THE BEST GYMS AROUND.</h2>
+    <p class="text-zinc-400 mt-4 text-[15px] leading-relaxed">Google review summary: members say this gym features a <b class="text-white">wide variety of modern, well-maintained equipment</b>, and is <b class="text-white">spacious and clean</b>. Positive, motivating environment that keeps you consistent. Friendly coaches, excellent guidance & personalized training.</p>
+    <div class="mt-6 space-y-3">
+      <div class="flex gap-3 bg-panel border border-white/10 rounded-2xl p-4"><div class="w-10 h-10 rounded-xl bg-lime/15 text-lime flex items-center justify-center"><i class="fa-solid fa-spray-can-sparkles"></i></div><div><div class="font-bold text-sm">Hygiene-first floors + Shower</div><div class="text-xs text-muted">Daily deep-clean schedule, sanitized stations, fresh locker & shower zone.</div></div></div>
+      <div class="flex gap-3 bg-panel border border-white/10 rounded-2xl p-4"><div class="w-10 h-10 rounded-xl bg-lime/15 text-lime flex items-center justify-center"><i class="fa-solid fa-user-check"></i></div><div><div class="font-bold text-sm">Coaches who actually coach</div><div class="text-xs text-muted">Fitness assessment, nutrition consulting & senior-citizen friendly programming.</div></div></div>
+      <div class="flex gap-3 bg-panel border border-white/10 rounded-2xl p-4"><div class="w-10 h-10 rounded-xl bg-lime/15 text-lime flex items-center justify-center"><i class="fa-solid fa-bolt"></i></div><div><div class="font-bold text-sm">Motivating crowd, zero ego</div><div class="text-xs text-muted">Beginners to bodybuilders — supportive Vijayanagar fitness community.</div></div></div>
+    </div>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <button onclick="openBooking('Free Trial')" class="btn-lime rounded-full px-6 py-3 text-sm font-extrabold shine">CLAIM 1-DAY FREE TRIAL</button>
+      <a href="#reviews" class="btn-ghost rounded-full px-6 py-3 text-sm font-bold">READ 395 REVIEWS</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<section class="bg-gradient-to-r from-lime via-[#e8ff70] to-lime text-black py-10">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><div class="font-display text-4xl md:text-5xl tick"><span class="counter" data-target="98">0</span>%</div><div class="text-xs font-extrabold tracking-widest">MEMBER SATISFACTION</div></div>
+    <div><div class="font-display text-4xl md:text-5xl tick"><span class="counter" data-target="12">0</span>+</div><div class="text-xs font-extrabold tracking-widest">WEEKLY GROUP CLASSES</div></div>
+    <div><div class="font-display text-4xl md:text-5xl tick"><span class="counter" data-target="20">0</span>+</div><div class="text-xs font-extrabold tracking-widest">PROGRAMS & SERVICES</div></div>
+    <div><div class="font-display text-4xl md:text-5xl tick">4.5★</div><div class="text-xs font-extrabold tracking-widest">395 GOOGLE REVIEWS</div></div>
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section id="trainers" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+  <div class="flex flex-col md:flex-row md:items-end justify-between reveal">
+    <div><div class="text-lime text-xs font-extrabold tracking-[.35em]">● COACHES</div><h2 class="font-display text-4xl md:text-6xl mt-2">MEET YOUR <span class="text-lime">CORNER TEAM</span></h2></div>
+    <p class="text-muted text-sm max-w-md">Certified personal trainers • Transformation specialists • Senior-fitness & nutrition experts. Tap a coach to book a consult.</p>
+  </div>
+  <div id="trainerGrid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule" class="bg-panel border-y border-white/10 py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 reveal">
+      <div><div class="text-lime text-xs font-extrabold tracking-[.35em]">● LIVE TIMETABLE</div><h2 class="font-display text-4xl md:text-6xl mt-2">THIS WEEK AT <span class="text-lime">CHANGEOVER</span></h2></div>
+      <div class="flex gap-2 flex-wrap" id="dayTabs"></div>
+    </div>
+    <div class="mt-6 glass rounded-3xl overflow-hidden card-glow reveal">
+      <div class="grid md:grid-cols-[1fr_280px]">
+        <div id="classList" class="p-2 md:p-4"></div>
+        <div class="bg-gradient-to-b from-lime to-lime2 text-black p-6 flex flex-col justify-between">
+          <div><div class="font-display text-3xl leading-none">BOOK<br>YOUR<br>SPOT.</div><p class="text-sm font-semibold mt-3">Cult.fit members scan & enter. Non-members need trial pass.</p>
+          <div class="mt-4 bg-black text-white rounded-2xl p-4 text-sm"><div class="flex justify-between"><span class="text-zinc-400">Occupancy now</span><span class="font-bold text-lime" id="occupancy">68%</span></div><div class="h-2 bg-white/10 rounded-full mt-2 overflow-hidden"><div id="occBar" class="h-full bg-lime rounded-full" style="width:68%"></div></div><div class="text-[11px] text-zinc-400 mt-2">Moderate crowd • Best time: 10AM–4PM</div></div></div>
+          <button onclick="openBooking('Class Booking')" class="mt-5 bg-black text-lime rounded-full py-3 font-extrabold text-sm hover:bg-zinc-900">BOOK ON CULT.FIT <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+  <div class="text-center reveal"><div class="text-lime text-xs font-extrabold tracking-[.35em]">● MEMBERSHIP</div><h2 class="font-display text-4xl md:text-6xl mt-2">PICK YOUR <span class="stroke-lime">POWER PLAN</span></h2>
+    <div class="mt-5 inline-flex bg-panel border border-white/10 rounded-full p-1 gap-1 text-sm font-bold">
+      <button id="billMonthly" onclick="setBilling('monthly')" class="px-5 py-2 rounded-full bg-lime text-black">Monthly</button>
+      <button id="billYearly" onclick="setBilling('yearly')" class="px-5 py-2 rounded-full text-zinc-300">Yearly <span class="text-[10px] bg-blaze text-white px-2 py-0.5 rounded-full ml-1">-28%</span></button>
+    </div>
+  </div>
+  <div id="priceGrid" class="mt-10 grid md:grid-cols-3 gap-4"></div>
+  <div class="mt-6 text-center text-xs text-muted">All plans include fitness assessment • locker • shower • Cult.fit app tracking • On-site parking. No hidden charges. Pause available.</div>
+</section>
+
+<!-- PHOTOS / TRANSFORMATIONS -->
+<section id="photos" class="bg-panel border-y border-white/10 py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+      <div><div class="text-lime text-xs font-extrabold tracking-[.35em]">● PHOTOS + RESULTS</div><h2 class="font-display text-4xl md:text-6xl mt-2">INSIDE THE <span class="text-lime">ARENA</span></h2></div>
+      <div class="flex gap-2 flex-wrap" id="galFilters">
+        <button data-f="all" class="gf tab-active chip rounded-full px-4 py-2 text-xs font-bold">ALL</button>
+        <button data-f="strength" class="gf chip rounded-full px-4 py-2 text-xs font-bold">STRENGTH</button>
+        <button data-f="cardio" class="gf chip rounded-full px-4 py-2 text-xs font-bold">CARDIO</button>
+        <button data-f="group" class="gf chip rounded-full px-4 py-2 text-xs font-bold">GROUP</button>
+        <button data-f="functional" class="gf chip rounded-full px-4 py-2 text-xs font-bold">FUNCTIONAL</button>
+      </div>
+    </div>
+
+    <!-- Before After slider -->
+    <div class="mt-8 grid lg:grid-cols-[1.1fr_.9fr] gap-4 reveal">
+      <div class="before-after rounded-3xl h-[380px] md:h-[460px] border border-white/10" id="baBox">
+        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="after">
+        <div id="baBeforeWrap" class="absolute inset-0 overflow-hidden" style="width:50%">
+          <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" style="width:100vw;max-width:none" id="baBeforeImg" alt="before">
+          <div class="absolute top-4 left-4 bg-black/70 rounded-full px-3 py-1 text-[11px] font-bold">BEFORE</div>
+        </div>
+        <div class="absolute top-4 right-4 bg-lime text-black rounded-full px-3 py-1 text-[11px] font-extrabold">AFTER • 16 WEEKS</div>
+        <div class="ba-handle" id="baHandle" style="left:50%"><div class="ba-knob" style="left:0"><i class="fa-solid fa-left-right"></i></div></div>
+        <div class="absolute bottom-4 left-4 right-4 glass rounded-2xl p-3 flex items-center gap-3 text-xs"><i class="fa-solid fa-arrows-left-right text-lime"></i> Drag to compare — Real member fat-loss program: -14.2 kg, Strength +40% <button onclick="openBooking('Transformation')" class="ml-auto bg-lime text-black font-extrabold rounded-full px-4 py-2">START MINE</button></div>
+      </div>
+      <div class="columns-2 gap-3 space-y-3 [column-fill:_balance]" id="gallery"></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+  <div class="grid lg:grid-cols-[340px_1fr] gap-6">
+    <div class="bg-panel border border-white/10 rounded-3xl p-6 reveal h-fit lg:sticky lg:top-24">
+      <div class="flex items-center gap-2 text-sm font-bold"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" class="w-5 h-5" alt="G"> Google review summary</div>
+      <div class="flex items-end gap-2 mt-3"><div class="font-display text-6xl">4.5</div><div class="pb-2"><div class="stars text-lg">★★★★★</div><div class="text-xs text-muted">(395 reviews)</div></div></div>
+      <div class="mt-4 space-y-2 text-xs font-bold" id="ratingBars"></div>
+      <div class="mt-4 bg-white/5 border border-white/10 rounded-2xl p-4 text-[13px] text-zinc-300 leading-relaxed">People say this gym features <b class="text-white">wide variety of modern & well-maintained equipment</b>, spacious & clean. Positive motivating environment helps stay consistent. Staff & coaches friendly, supportive, excellent guidance.</div>
+      <button onclick="openReviewModal()" class="btn-lime w-full rounded-full py-3 mt-4 text-sm font-extrabold">WRITE A REVIEW</button>
+      <div class="text-[11px] text-muted mt-2 text-center">Summarised by AI • +43 photos</div>
+    </div>
+    <div class="reveal">
+      <div class="flex items-center justify-between"><h2 class="font-display text-4xl md:text-5xl">MEMBER <span class="text-lime">STORIES</span></h2>
+        <div class="flex gap-2"><button onclick="scrollReviews(-1)" class="w-10 h-10 rounded-full chip"><i class="fa-solid fa-arrow-left"></i></button><button onclick="scrollReviews(1)" class="w-10 h-10 rounded-full bg-lime text-black"><i class="fa-solid fa-arrow-right"></i></button></div>
+      </div>
+      <div id="reviewTrack" class="mt-5 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory" style="scrollbar-width:none"></div>
+      <div class="mt-2 flex items-center gap-3 text-xs text-muted"><i class="fa-solid fa-circle-check text-lime"></i> Verified Cult.fit & Google reviews • Vijayanagar location only</div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS: BMI + ASSESSMENT -->
+<section id="tools" class="bg-panel border-y border-white/10 py-16">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-5">
+    <div class="bg-gradient-to-br from-[#1a1a1e] to-[#0f0f12] border border-white/10 rounded-3xl p-6 md:p-8 reveal card-glow">
+      <div class="text-lime text-xs font-extrabold tracking-[.3em]">● FREE TOOL — BMI + FAT-LOSS ESTIMATOR</div>
+      <h3 class="font-display text-3xl md:text-4xl mt-2">KNOW YOUR <span class="text-lime">STARTING POINT</span></h3>
+      <div class="grid grid-cols-2 gap-3 mt-5">
+        <div><label class="text-xs font-bold text-muted">HEIGHT (cm)</label><input id="bmiH" type="number" value="172" class="field mt-1 tick"></div>
+        <div><label class="text-xs font-bold text-muted">WEIGHT (kg)</label><input id="bmiW" type="number" value="82" class="field mt-1 tick"></div>
+        <div><label class="text-xs font-bold text-muted">AGE</label><input id="bmiAge" type="number" value="28" class="field mt-1 tick"></div>
+        <div><label class="text-xs font-bold text-muted">GOAL</label><select id="bmiGoal" class="field mt-1"><option>Fat Loss</option><option>Muscle Building</option><option>Weight Gain</option><option>Strength</option></select></div>
+      </div>
+      <input id="bmiRange" type="range" min="40" max="140" value="82" class="w-full mt-4 accent-[#D6FF2A]">
+      <button onclick="calcBMI()" class="btn-lime w-full rounded-full py-3 mt-3 font-extrabold text-sm">CALCULATE NOW <i class="fa-solid fa-calculator ml-1"></i></button>
+      <div id="bmiOut" class="mt-4 hidden bg-black/40 border border-lime/30 rounded-2xl p-4"></div>
+    </div>
+    <div class="bg-lime text-black rounded-3xl p-6 md:p-8 reveal relative overflow-hidden">
+      <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-black/10"></div>
+      <div class="absolute -right-4 top-24 w-24 h-24 rounded-full bg-black/10"></div>
+      <div class="text-[11px] font-extrabold tracking-[.3em]">● FITNESS ASSESSMENT — WORTH ₹999, FREE TODAY</div>
+      <h3 class="font-display text-3xl md:text-4xl mt-2 leading-none">GET YOUR BODY COMPOSITION + DIET MAP</h3>
+      <ul class="mt-4 space-y-2 text-sm font-semibold">
+        <li><i class="fa-solid fa-circle-check mr-2"></i>Weight, BMI, fat %, muscle mass & posture check</li>
+        <li><i class="fa-solid fa-circle-check mr-2"></i>Personalised fat-loss / muscle-gain roadmap</li>
+        <li><i class="fa-solid fa-circle-check mr-2"></i>Nutrition consulting + trial workout with coach</li>
+      </ul>
+      <div class="mt-5 flex gap-2">
+        <input id="assessPhone" placeholder="Enter mobile number" maxlength="10" class="flex-1 rounded-full px-5 py-3 text-sm font-bold text-black outline-none border-2 border-black/10 focus:border-black">
+        <button onclick="claimAssessment()" class="bg-black text-lime rounded-full px-6 py-3 text-sm font-extrabold whitespace-nowrap">CLAIM</button>
+      </div>
+      <div class="text-[11px] font-bold mt-2 opacity-70">✓ 214 Vijayanagar members claimed this month • No spam, only WhatsApp confirmation</div>
+      <div class="mt-4 flex items-center gap-3 bg-black text-white rounded-2xl p-3"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=200&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="coach"><div class="text-xs"><b>Coach Divya will call you</b><br><span class="text-zinc-400">Typically within 30 mins (9AM–9PM)</span></div><span class="ml-auto text-lime text-xs font-bold bg-lime/15 px-3 py-1 rounded-full">ONLINE</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT / CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+  <div class="grid lg:grid-cols-[1fr_1fr] gap-6">
+    <div class="reveal">
+      <div class="text-lime text-xs font-extrabold tracking-[.35em]">● MAKE APPOINTMENT • CULT.FIT</div>
+      <h2 class="font-display text-4xl md:text-6xl mt-2 leading-none">BOOK YOUR <span class="text-lime">FREE TRIAL</span> VISIT</h2>
+      <p class="text-muted text-sm mt-3">Fill in 20 seconds. We’ll reserve your slot + send directions on WhatsApp. Or call <a href="tel:+917406699917" class="text-lime font-bold">074066 99917</a>.</p>
+      <form id="bookForm" onsubmit="submitBooking(event)" class="mt-6 bg-panel border border-white/10 rounded-3xl p-5 md:p-6 space-y-3 card-glow">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input id="fName" required placeholder="Full name *" class="field">
+          <input id="fPhone" required pattern="[0-9]{10}" maxlength="10" placeholder="Mobile (10-digit) *" class="field">
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <select id="fGoal" class="field"><option>Fat Loss Program</option><option>Muscle Building</option><option>Personal Training</option><option>HIIT / Cross Functional</option><option>Kickboxing</option><option>Cycling</option><option>Senior Citizens Fitness</option><option>Weight Gain Program</option><option>General Fitness</option></select>
+          <select id="fTime" class="field"><option>Morning 6–9 AM</option><option>Morning 9–12 PM</option><option>Evening 4–7 PM</option><option>Evening 7–10 PM</option><option>Sunday Morning</option></select>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input id="fDate" type="date" class="field">
+          <select id="fType" class="field"><option>Free Trial Workout</option><option>Gym Tour</option><option>Fitness Assessment</option><option>Personal Training Demo</option><option>Cult.fit Activation</option></select>
+        </div>
+        <textarea id="fNote" rows="2" placeholder="Any injury / medical note? (optional)" class="field"></textarea>
+        <button class="btn-lime w-full rounded-full py-3.5 font-extrabold text-sm">CONFIRM APPOINTMENT <i class="fa-solid fa-calendar-check ml-1"></i></button>
+        <div class="text-[11px] text-muted text-center">By booking you agree to be contacted on call/WhatsApp. Free trial valid for Vijayanagar first-timers.</div>
+      </form>
+      <div id="myBookings" class="mt-4 hidden"></div>
+    </div>
+    <div class="space-y-4 reveal">
+      <div class="bg-panel border border-white/10 rounded-3xl overflow-hidden">
+        <iframe title="map" src="https://www.google.com/maps?q=RR%20Plaza%20KHB%20Colony%205th%20Main%20Road%20Vijayanagar%20Bengaluru%20560040&output=embed" class="w-full h-[280px] grayscale invert-[.9] contrast-[.9]" loading="lazy"></iframe>
+        <div class="p-5">
+          <div class="font-display text-xl">CHANGEOVER FITNESS STUDIO</div>
+          <div class="text-sm text-zinc-400 mt-1 leading-relaxed">40/11, 2nd and 3rd Floor, RR Plaza, KHB Colony, 5th Main Road, opp. OLD A2B, opp. Hanumanthu Palav, Govindaraja Nagar, Vijayanagar, Bengaluru, Karnataka 560040 • 500.0 m</div>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Changeover+Fitness+Studio+RR+Plaza+KHB+Colony+Vijayanagar+Bengaluru+560040" target="_blank" class="btn-lime rounded-full px-4 py-2 text-xs font-extrabold">GET DIRECTIONS</a>
+            <a href="tel:+917406699917" class="btn-ghost rounded-full px-4 py-2 text-xs font-bold">074066 99917</a>
+            <button onclick="copyAddress()" class="btn-ghost rounded-full px-4 py-2 text-xs font-bold"><i class="fa-regular fa-copy mr-1"></i>COPY ADDRESS</button>
+          </div>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="https://wa.me/917406699917?text=Hi%20Changeover!%20I%20want%20a%20free%20trial%20at%20Vijayanagar" target="_blank" class="bg-[#1a2e1f] border border-green-500/30 rounded-3xl p-5 flex items-center gap-3 hover:-translate-y-1 transition"><div class="w-11 h-11 rounded-full bg-green-500 text-white flex items-center justify-center text-xl"><i class="fa-brands fa-whatsapp"></i></div><div><div class="font-extrabold text-sm">WhatsApp Us</div><div class="text-xs text-green-300">Instant reply • 5:30AM–10:30PM</div></div></a>
+        <a href="https://cult.fit" target="_blank" class="bg-panel border border-white/10 rounded-3xl p-5 flex items-center gap-3 hover:-translate-y-1 transition"><div class="w-11 h-11 rounded-full bg-lime text-black flex items-center justify-center text-xl font-display">C</div><div><div class="font-extrabold text-sm">Cult.fit Pass Accepted</div><div class="text-xs text-muted">cult.fit • Make appointment</div></div></a>
+      </div>
+      <!-- FAQ -->
+      <div class="bg-panel border border-white/10 rounded-3xl p-5">
+        <div class="font-display text-xl mb-3">QUICK ANSWERS</div>
+        <div id="faq"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+  <div class="relative overflow-hidden rounded-[28px] bg-gradient-to-r from-[#161600] via-[#1e1e00] to-[#2a0e00] border border-lime/20 p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-6 reveal">
+    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-25" alt="">
+    <div class="relative flex-1"><h3 class="font-display text-3xl md:text-5xl leading-none">FIRST WORKOUT <span class="text-lime">IS ON US.</span> SECOND ONE WILL HOOK YOU.</h3><p class="text-zinc-300 text-sm mt-2">Join 2,500+ Vijayanagar transformations. No joining fee this week + free diet chart.</p></div>
+    <div class="relative flex flex-col gap-2 w-full md:w-auto"><button onclick="openBooking('Free Trial')" class="btn-lime rounded-full px-8 py-4 font-extrabold">BOOK FREE TRIAL NOW</button><a href="tel:+917406699917" class="text-center text-xs text-zinc-300 hover:text-lime">or call 074066 99917</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 bg-[#0a0a0c] pt-12 pb-28 md:pb-10">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
+    <div><div class="flex items-center gap-2"><div class="w-10 h-10 rounded-xl bg-lime text-black font-display text-xl flex items-center justify-center">C</div><div class="font-display text-lg">CHANGEOVER FITNESS</div></div><p class="text-muted text-[13px] mt-3 leading-relaxed">Best gym in Vijayanagar, Bengaluru. Spacious modern fitness studio with cardio, strength, functional & group training. Available on Cult.fit.</p><div class="flex gap-2 mt-4"><a href="#" class="w-9 h-9 rounded-full chip flex items-center justify-center hover:text-lime"><i class="fa-brands fa-instagram"></i></a><a href="#" class="w-9 h-9 rounded-full chip flex items-center justify-center hover:text-lime"><i class="fa-brands fa-youtube"></i></a><a href="#" class="w-9 h-9 rounded-full chip flex items-center justify-center hover:text-lime"><i class="fa-brands fa-facebook"></i></a><a href="https://wa.me/917406699917" class="w-9 h-9 rounded-full chip flex items-center justify-center hover:text-lime"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+    <div><div class="font-extrabold tracking-widest text-xs text-zinc-400">EXPLORE</div><div class="mt-3 grid gap-2 text-zinc-300"><a href="#overview" class="hover:text-lime">Overview</a><a href="#services" class="hover:text-lime">Services</a><a href="#schedule" class="hover:text-lime">Class Schedule</a><a href="#pricing" class="hover:text-lime">Membership</a><a href="#reviews" class="hover:text-lime">Reviews (395)</a></div></div>
+    <div><div class="font-extrabold tracking-widest text-xs text-zinc-400">PROGRAMS</div><div class="mt-3 grid gap-2 text-zinc-300"><span>Fat Loss Program</span><span>Muscle Building</span><span>Personal Training</span><span>Kickboxing & HIIT</span><span>Senior Citizens Fitness</span><span>Nutrition Consulting</span></div></div>
+    <div><div class="font-extrabold tracking-widest text-xs text-zinc-400">VISIT US</div><div class="mt-3 text-zinc-300 text-[13px] leading-relaxed">RR Plaza, 5th Main Road,<br>Vijayanagar, Bengaluru 560040<br><br><span class="text-lime font-bold">Open • Closes 10:30 PM</span><br>074066 99917<br>cult.fit partner gym</div></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-2 text-[11px] text-muted"><span>© 2026 Changeover Fitness Studio • Vijayanagar. All rights reserved.</span><span>Made for fitness • Shower • Online Classes • On-site Parking</span></div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden glass border-t border-white/10 px-3 py-2 grid grid-cols-3 gap-2">
+  <a href="tel:+917406699917" class="bg-white/10 rounded-full py-2.5 text-center text-xs font-extrabold"><i class="fa-solid fa-phone text-lime mr-1"></i> CALL</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Changeover+Fitness+Studio+Vijayanagar+Bengaluru" class="bg-white/10 rounded-full py-2.5 text-center text-xs font-extrabold"><i class="fa-solid fa-location-arrow text-lime mr-1"></i> DIRECTIONS</a>
+  <button onclick="openBooking('Free Trial')" class="bg-lime text-black rounded-full py-2.5 text-xs font-extrabold">FREE TRIAL</button>
+</div>
+
+<!-- FLOATING -->
+<div class="fixed right-4 bottom-20 md:bottom-6 z-40 flex flex-col gap-2">
+  <a href="https://wa.me/917406699917" target="_blank" class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-xl shadow-xl hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></a>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="w-12 h-12 rounded-full glass border border-white/15 flex items-center justify-center hover:text-lime"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<!-- BOOKING MODAL -->
+<div id="bookModal" class="fixed inset-0 z-[80] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeBooking()"></div>
+  <div class="relative bg-panel border border-white/15 rounded-3xl max-w-md w-full p-6 card-glow">
+    <button onclick="closeBooking()" class="absolute top-4 right-4 w-9 h-9 rounded-full chip"><i class="fa-solid fa-xmark"></i></button>
+    <div class="text-lime text-[11px] font-extrabold tracking-[.3em]">● <span id="mType">FREE TRIAL</span></div>
+    <h3 class="font-display text-3xl mt-1">RESERVE YOUR SPOT</h3>
+    <p class="text-xs text-muted mt-1">Vijayanagar • Closes 10:30 PM • Instant WhatsApp confirmation</p>
+    <div class="grid grid-cols-3 gap-2 mt-4" id="slotGrid"></div>
+    <div class="space-y-2 mt-4">
+      <input id="mName" placeholder="Your name *" class="field">
+      <input id="mPhone" placeholder="Mobile number *" maxlength="10" class="field">
+    </div>
+    <button onclick="confirmModalBooking()" class="btn-lime w-full rounded-full py-3.5 mt-4 font-extrabold text-sm">CONFIRM <span id="mSlotTxt">— 6:30 PM</span></button>
+    <div class="text-center text-[11px] text-muted mt-2">Or <a href="tel:+917406699917" class="text-lime font-bold">call 074066 99917</a> • Available on Cult.fit</div>
+  </div>
+</div>
+
+<!-- REVIEW MODAL -->
+<div id="revModal" class="fixed inset-0 z-[80] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeReviewModal()"></div>
+  <div class="relative bg-panel border border-white/15 rounded-3xl max-w-md w-full p-6">
+    <button onclick="closeReviewModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full chip"><i class="fa-solid fa-xmark"></i></button>
+    <h3 class="font-display text-3xl">RATE YOUR WORKOUT</h3>
+    <div class="flex gap-1 text-3xl mt-3" id="starPick"></div>
+    <input id="rName" placeholder="Your name" class="field mt-4">
+    <textarea id="rText" rows="3" placeholder="Ambience, crowd, equipment, coaches..." class="field mt-2"></textarea>
+    <button onclick="submitReview()" class="btn-lime w-full rounded-full py-3 mt-3 font-extrabold text-sm">POST REVIEW</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="this.classList.remove('show')"><img id="lbImg" src="" class="max-h-[85vh] max-w-[92vw] rounded-2xl object-contain" alt=""></div>
+
+<!-- TOAST -->
+<div id="toast" class="toast glass border border-lime/30 rounded-full px-5 py-3 text-sm font-bold flex items-center gap-2 whitespace-nowrap"><i class="fa-solid fa-circle-check text-lime"></i><span id="toastTxt">Done!</span></div>
+
+<script>
+/* ---------- DATA ---------- */
+const services = [
+  {n:'Strength Training', d:'Racks, smith, plate-loaded & dumbbells', i:'fa-dumbbell', tag:'POPULAR'},
+  {n:'Cardio Conditioning', d:'Treadmills, ellipticals, rowers, cycles', i:'fa-heart-pulse'},
+  {n:'HIIT Exercise Classes', d:'Fat-burn intervals, 45-min blasts', i:'fa-fire', tag:'HOT'},
+  {n:'Cross Functional Training', d:'Turf WODs, sled, boxes, ropes', i:'fa-arrows-up-down-left-right'},
+  {n:'Functional Exercises', d:'Mobility, core, balance & posture', i:'fa-person-running'},
+  {n:'Cycling Studio', d:'Rhythm rides + endurance sprints', i:'fa-bicycle'},
+  {n:'Kickboxing', d:'Striking, footwork & conditioning', i:'fa-hand-fist', tag:'NEW'},
+  {n:'Body Building', d:'Hypertrophy splits + posing prep', i:'fa-medal'},
+  {n:'Muscle Building', d:'Progressive overload programs', i:'fa-armchair'},
+  {n:'Fat Loss Program', d:'12-week diet + training system', i:'fa-weight-scale', tag:'POPULAR'},
+  {n:'Weight Loss Program', d:'Sustainable kg-drop coaching', i:'fa-arrow-trend-down'},
+  {n:'Weight Gain Program', d:'Lean bulk + strength foundation', i:'fa-arrow-trend-up'},
+  {n:'Body Transformation', d:'90-day full photo-tracked plans', i:'fa-wand-magic-sparkles'},
+  {n:'Personal Training', d:'1-on-1 coach, custom schedule', i:'fa-user-ninja', tag:'1-ON-1'},
+  {n:'Personal Trainer', d:'Choose your specialist coach', i:'fa-id-card'},
+  {n:'Nutrition Consulting', d:'Veg/non-veg diet charts, macros', i:'fa-apple-whole'},
+  {n:'Weight-Loss Consulting', d:'Habit + lifestyle correction', i:'fa-clipboard-check'},
+  {n:'Fitness Assessment', d:'BMI, fat%, muscle & mobility scan', i:'fa-stethoscope', tag:'FREE'},
+  {n:'Senior Citizens Fitness', d:'Joint-safe strength & balance', i:'fa-person-cane'},
+  {n:'Fitness Studio + Online', d:'Train in-club or live online', i:'fa-video'},
+];
+const trainers = [
+  {n:'Arjun R.', r:'Strength & Bodybuilding', img:'https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=600&auto=format&fit=crop', s:'8 yrs • 400+ transformations', tag:'HEAD COACH'},
+  {n:'Divya S.', r:'Fat Loss & Nutrition', img:'https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600&auto=format&fit=crop', s:'6 yrs • Diet specialist', tag:'NUTRITION'},
+  {n:'Kiran M.', r:'HIIT • CrossFit • Kickboxing', img:'https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?q=80&w=600&auto=format&fit=crop', s:'7 yrs • Combat conditioning', tag:'HIIT'},
+  {n:'Rohit V.', r:'Personal Training • Senior Fitness', img:'https://images.unsplash.com/photo-1583864697784-a0efc8379f70?q=80&w=600&auto=format&fit=crop', s:'9 yrs • Rehab-safe training', tag:'PT'},
+];
+const scheduleData = {
+  Mon:[['06:00 AM','HIIT Blast','Arjun • Studio 3',14],['07:30 AM','Strength: Push Day','Kiran • Floor 2',20],['12:30 PM','Cycling Sprint','Divya • Cardio Deck',10],['06:30 PM','Kickboxing Basics','Kiran • Studio 3',12],['08:00 PM','Core + Mobility','Rohit • Turf',18]],
+  Tue:[['06:00 AM','Cross Functional WOD','Kiran • Turf',16],['08:00 AM','Fat Burn Cardio','Divya • Deck',22],['05:30 PM','Body Building: Pull','Arjun • Floor 2',20],['07:00 PM','HIIT Advanced','Arjun • Studio 3',14]],
+  Wed:[['06:00 AM','Kickboxing Conditioning','Kiran • Studio 3',12],['07:30 AM','Legs Strength','Arjun • Floor 2',18],['06:30 PM','Cycling Endurance','Divya • Deck',15],['08:00 PM','Senior Fitness Batch','Rohit • Studio 3',10]],
+  Thu:[['06:00 AM','HIIT Blast','Arjun • Studio 3',14],['12:30 PM','Functional + Core','Rohit • Turf',20],['06:30 PM','Boxing Footwork','Kiran • Studio 3',12],['07:30 PM','Muscle Pump','Arjun • Floor 2',18]],
+  Fri:[['06:00 AM','Cross Functional','Kiran • Turf',16],['08:00 AM','Fat Loss Circuit','Divya • Studio 3',20],['06:30 PM','Kickboxing Spar Drills','Kiran • Studio 3',10],['08:00 PM','Stretch & Recovery','Rohit • Studio',25]],
+  Sat:[['07:00 AM','Weekend Warrior WOD','All Coaches • Turf',30],['09:00 AM','Transformation Meet','Divya • Studio 3',25],['11:00 AM','Personal Training Demos','Rohit • Floor 2',12]],
+  Sun:[['08:00 AM','Sunrise Cycling','Divya • Deck',15],['09:30 AM','Mobility + Assessment Camp','Rohit • Studio 3',20]],
+};
+const galleryImgs = [
+  {s:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop', c:'strength'},
+  {s:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop', c:'strength'},
+  {s:'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop', c:'cardio'},
+  {s:'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop', c:'group'},
+  {s:'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop', c:'group'},
+  {s:'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop', c:'functional'},
+  {s:'https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=800&auto=format&fit=crop', c:'strength'},
+  {s:'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=800&auto=format&fit=crop', c:'cardio'},
+];
+let reviews = [
+  {n:'Sandeep Gowda', t:'2 weeks ago', s:5, x:'Ambience, crowd and equipment were at par with some of the best gyms around. Spacious two floors, machines never feel crowded even at peak. Coaches correct form personally.', h:42},
+  {n:'Priya Nair', t:'1 month ago', s:5, x:'Joined for fat loss program. Lost 6kg in 2 months. Nutrition consulting is practical for Indian food. Very motivating environment, helps stay consistent.', h:35},
+  {n:'Rahul Verma', t:'3 weeks ago', s:4, x:'Wide variety of modern and well-maintained equipment. Dedicated cardio and weightlifting areas are huge plus. Parking available which is rare in Vijayanagar.', h:28},
+  {n:'Ananya Rao', t:'2 months ago', s:5, x:'Best gym in my area! Kickboxing + HIIT batches are addictive. Staff friendly and supportive. Shower and locker clean. Cult.fit booking is seamless.', h:31},
+  {n:'Vikram M.', t:'1 week ago', s:4, x:'Excellent guidance and personalized training. Senior citizens fitness batch for my dad is joint-friendly and safe. One star less only because evening crowd is high 6-8pm.', h:19},
+  {n:'Deepak S.', t:'3 months ago', s:5, x:'Body transformation journey - gained 5kg lean muscle in 4 months. Trainer Arjun tracks every lift. Clean, spacious, positive vibe. Highly recommend near Vijayanagar.', h:26},
+];
+const faqs = [
+  ['What are the gym timings?','Mon–Sat 5:30 AM to 10:30 PM, Sunday 7 AM to 12 PM. We are open now and close at 10:30 PM. Peak crowd is 6–9 AM & 6–8:30 PM; best time for machines is 10 AM–4 PM.'],
+  ['Where exactly is it? Is parking available?','2nd & 3rd Floor, RR Plaza, KHB Colony, 5th Main Road, opp. Old A2B, Vijayanagar, Bengaluru 560040. Yes — on-site parking + shower + locker available.'],
+  ['Is it available on Cult.fit?','Yes! Changeover Fitness Studio is live on Cult.fit. You can book slots, make appointments and track workouts via the Cult app, or walk in for a free trial.'],
+  ['Do you offer personal training & diet plans?','Yes — 1-on-1 personal training, nutrition consulting, fat-loss / weight-gain programs, fitness assessments and senior-citizen batches with certified coaches.'],
+  ['What is the price? Is there a free trial?','Plans start ~₹1,500/mo with quarterly & yearly discounts. First trial workout + fitness assessment (worth ₹999) is FREE this week — book above.'],
+];
+const plansMonthly = [
+  {n:'STARTER', p:1500, f:['Gym floor access','1 Group class/day','Locker + Shower','Cult.fit app tracking'], c:'For beginners testing consistency'},
+  {n:'TRANSFORM', p:2500, f:['All Starter + Unlimited HIIT/Cycling/Kickboxing','Monthly fitness assessment','Diet chart + WhatsApp support','1 PT session / month'], c:'Most popular for fat-loss & muscle', pop:true},
+  {n:'ELITE PT', p:6000, f:['1-on-1 Personal Training (12 sess)','Custom nutrition consulting','Weekly body-composition scan','Priority slots + recovery plan'], c:'Fastest results with a dedicated coach'},
+];
+const plansYearly = [
+  {n:'STARTER', p:12999, f:['Gym floor access','1 Group class/day','Locker + Shower','Cult.fit app tracking'], c:'Save ₹5,000 vs monthly'},
+  {n:'TRANSFORM', p:19999, f:['All Starter + Unlimited classes','Quarterly assessment + diet','WhatsApp coach support','4 PT sessions included'], c:'Best value — most joined', pop:true},
+  {n:'ELITE PT', p:55000, f:['48 PT sessions (1-on-1)','Full nutrition + transformation','Monthly scans + photo tracking','Guest passes + merch'], c:'Full-year guided changeover'},
+];
+
+/* ---------- PRELOADER ---------- */
+let lp=0; const li=setInterval(()=>{lp+=Math.random()*18; if(lp>=100){lp=100;clearInterval(li); setTimeout(()=>document.getElementById('preloader').classList.add('hide'),400);} document.getElementById('loadFill').style.width=lp+'%'; document.getElementById('loadPct').innerText=Math.floor(lp)+'%';},120);
+
+/* ---------- NAV / MENU ---------- */
+document.getElementById('menuBtn').onclick=()=>document.getElementById('mobileMenu').classList.toggle('hidden');
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.onclick=()=>document.getElementById('mobileMenu').classList.add('hidden'));
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
+
+/* ---------- MARQUEE ---------- */
+const marqItems=['STRENGTH','HIIT','KICKBOXING','CYCLING','FAT LOSS','MUSCLE BUILDING','PERSONAL TRAINING','NUTRITION','4.5★ RATED','VIJAYANAGAR'];
+const mHTML=marqItems.map(t=>`<span class="flex items-center gap-8 whitespace-nowrap">${t} <span class="w-2 h-2 bg-black rounded-full inline-block"></span></span>`).join('');
+document.getElementById('marq1').innerHTML=mHTML; document.getElementById('marq2').innerHTML=mHTML;
+
+/* ---------- OPEN STATUS LOGIC ---------- */
+function updateStatus(){
+  const now=new Date(); const day=now.getDay(); const mins=now.getHours()*60+now.getMinutes();
+  let open=false, closeStr='10:30 PM';
+  if(day===0){ open = mins>=420 && mins<720; closeStr='12:00 PM'; } else { open = mins>=330 && mins<1350; }
+  const txt = open? `Open Now • Closes ${closeStr}` : `Closed • Opens ${day===0?'7:00 AM':'5:30 AM'}`;
+  document.getElementById('topStatus').innerText = txt+' • Vijayanagar';
+  document.getElementById('heroStatus').innerText = open? `OPEN • CLOSES ${closeStr}` : `CLOSED • OPENS SOON`;
+  document.getElementById('openText').innerText = open? 'Open Now':'Closed Now';
+  document.getElementById('openDot').className = 'w-3 h-3 rounded-full '+(open?'bg-green-400 dot-live':'bg-red-500');
+}
+updateStatus(); setInterval(updateStatus,60000);
+
+/* ---------- COUNTERS + REVEAL ---------- */
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll('.counter').forEach(el=>{
+  ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>{
+    const t=+el.dataset.target; let c=0; const step=Math.max(1,Math.floor(t/60));
+    const iv=setInterval(()=>{c+=step; if(c>=t){c=t;clearInterval(iv);} el.innerText=c.toLocaleString();},30);
+  }});
+});
+document.querySelectorAll('.reveal').forEach(el=>{
+  gsap.fromTo(el,{y:40,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+});
+
+/* ---------- SERVICES ---------- */
+function renderServices(filter=''){
+  const g=document.getElementById('serviceGrid');
+  const list=services.filter(s=>s.n.toLowerCase().includes(filter.toLowerCase())||s.d.toLowerCase().includes(filter.toLowerCase()));
+  g.innerHTML=list.map(s=>`
+    <div class="bg-[#151518] border border-white/10 rounded-2xl p-4 hover:border-lime/60 hover:-translate-y-1 transition group tilt">
+      <div class="flex items-start justify-between"><div class="w-11 h-11 rounded-xl bg-lime/12 text-lime flex items-center justify-center text-lg border border-lime/20"><i class="fa-solid ${s.i}"></i></div>
+      ${s.tag?`<span class="text-[9px] font-extrabold tracking-widest bg-lime text-black px-2 py-1 rounded-full">${s.tag}</span>`:''}</div>
+      <div class="font-extrabold text-[15px] mt-3">${s.n}</div><div class="text-xs text-muted mt-1">${s.d}</div>
+      <button onclick="openBooking('${s.n}')" class="mt-3 text-[11px] font-extrabold tracking-widest text-lime opacity-0 group-hover:opacity-100 transition">BOOK TRIAL →</button>
+    </div>`).join('') || `<div class="col-span-full text-center text-muted py-8">No match. Try “HIIT” or “Fat loss”. <button onclick="openBooking('Free Trial')" class="text-lime font-bold underline">Book free assessment instead</button></div>`;
+  attachTilt();
+}
+renderServices();
+document.getElementById('serviceSearch').addEventListener('input',e=>renderServices(e.target.value));
+
+/* ---------- TRAINERS ---------- */
+document.getElementById('trainerGrid').innerHTML=trainers.map(t=>`
+  <div class="bg-panel border border-white/10 rounded-3xl overflow-hidden group hover:border-lime/50 transition tilt">
+    <div class="relative h-72 overflow-hidden"><img src="${t.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="${t.n}">
+      <span class="absolute top-3 left-3 bg-lime text-black text-[10px] font-extrabold px-3 py-1 rounded-full tracking-widest">${t.tag}</span>
+      <div class="absolute bottom-3 left-3 right-3 glass rounded-xl px-3 py-2 flex items-center justify-between"><span class="text-[11px] font-bold">${t.s}</span><span class="text-lime">★★★★★</span></div>
+    </div>
+    <div class="p-4 flex items-center justify-between"><div><div class="font-display text-xl">${t.n.toUpperCase()}</div><div class="text-xs text-lime font-bold">${t.r}</div></div>
+    <button onclick="openBooking('PT with ${t.n}')" class="w-10 h-10 rounded-full bg-lime text-black hover:bg-white"><i class="fa-solid fa-arrow-right"></i></button></div>
+  </div>`).join('');
+
+/* ---------- SCHEDULE ---------- */
+let curDay = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date().getDay()];
+function renderTabs(){
+  document.getElementById('dayTabs').innerHTML=Object.keys(scheduleData).map(d=>`<button onclick="setDay('${d}')" class="chip rounded-full px-4 py-2 text-xs font-extrabold ${d===curDay?'tab-active':''}">${d.toUpperCase()}</button>`).join('');
+}
+function setDay(d){curDay=d;renderTabs();renderClasses();}
+function renderClasses(){
+  document.getElementById('classList').innerHTML = `<div class="text-[11px] font-extrabold tracking-widest text-muted px-3 pt-3">${curDay.toUpperCase()} • VIJAYANAGAR STUDIO</div>` + scheduleData[curDay].map((c,i)=>`
+    <div class="schedule-row flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:border-lime/30">
+      <div class="bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-center min-w-[78px]"><div class="font-extrabold text-[13px]">${c[0]}</div><div class="text-[10px] text-muted">60 MIN</div></div>
+      <div class="flex-1"><div class="font-extrabold text-[14px]">${c[1]}</div><div class="text-[11px] text-muted">${c[2]} • <span class="text-lime font-bold" id="seat-${curDay}-${i}">${c[3]} seats left</span></div></div>
+      <button onclick="bookClass('${c[1]} — ${c[0]}','seat-${curDay}-${i}')" class="btn-ghost rounded-full px-4 py-2 text-[11px] font-extrabold whitespace-nowrap hover:!border-lime">BOOK</button>
+    </div>`).join('');
+}
+renderTabs(); renderClasses();
+setInterval(()=>{ const o=55+Math.floor(Math.random()*25); document.getElementById('occupancy').innerText=o+'%'; document.getElementById('occBar').style.width=o+'%';},5000);
+function bookClass(name, seatId){
+  if(seatId){ const el=document.getElementById(seatId); let n=parseInt(el.innerText); if(n>0){el.innerText=(n-1)+' seats left';} else {toast('Batch full! Try next slot'); return;} }
+  toast(`Seat held: ${name} ✅`); openBooking(name);
+}
+
+/* ---------- PRICING ---------- */
+let billing='monthly';
+function setBilling(b){billing=b;
+  document.getElementById('billMonthly').className='px-5 py-2 rounded-full '+(b==='monthly'?'bg-lime text-black':'text-zinc-300');
+  document.getElementById('billYearly').className='px-5 py-2 rounded-full '+(b==='yearly'?'bg-lime text-black':'text-zinc-300');
+  renderPrices();
+}
+function renderPrices(){
+  const arr=billing==='monthly'?plansMonthly:plansYearly;
+  document.getElementById('priceGrid').innerHTML=arr.map(p=>`
+    <div class="${p.pop?'bg-gradient-to-b from-[#20200a] to-panel border-lime/60 price-pop shine':'bg-panel border-white/10'} border rounded-3xl p-6 relative card-glow tilt">
+      ${p.pop?'<span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-lime text-black text-[10px] font-extrabold px-4 py-1 rounded-full tracking-widest">MOST POPULAR ★ 4.5 RATED</span>':''}
+      <div class="text-xs font-extrabold tracking-[.3em] ${p.pop?'text-lime':'text-muted'}">${p.n}</div>
+      <div class="mt-2 flex items-end gap-1"><span class="font-display text-5xl">₹${p.p.toLocaleString('en-IN')}</span><span class="text-muted text-xs mb-2">/${billing==='monthly'?'mo':'yr'}</span></div>
+      <div class="text-xs ${p.pop?'text-lime':'text-muted'} font-bold mt-1">${p.c}</div>
+      <div class="mt-4 space-y-2 text-[13px]">${p.f.map(f=>`<div class="flex gap-2"><i class="fa-solid fa-check text-lime mt-1"></i>${f}</div>`).join('')}</div>
+      <button onclick="openBooking('${p.n} — ${billing}')" class="${p.pop?'btn-lime':'btn-ghost'} w-full rounded-full py-3 mt-5 text-sm font-extrabold">CHOOSE ${p.n}</button>
+      <div class="text-center text-[11px] text-muted mt-2">+ Free assessment • No joining fee*</div>
+    </div>`).join('');
+  attachTilt();
+}
+renderPrices();
+
+/* ---------- GALLERY ---------- */
+function renderGallery(f='all'){
+  document.getElementById('gallery').innerHTML=galleryImgs.filter(g=>f==='all'||g.c===f).map(g=>`
+    <img src="${g.s}" onclick="openLB('${g.s}')" class="gallery-item w-full rounded-2xl object-cover cursor-zoom-in hover:opacity-90 hover:scale-[1.02] transition mb-3 h-48" loading="lazy" alt="${g.c}">`).join('');
+}
+renderGallery();
+document.querySelectorAll('.gf').forEach(b=>b.onclick=()=>{document.querySelectorAll('.gf').forEach(x=>x.classList.remove('tab-active')); b.classList.add('tab-active'); renderGallery(b.dataset.f);});
+function openLB(s){document.getElementById('lbImg').src=s; document.getElementById('lightbox').classList.add('show');}
+
+/* Before-after drag */
+(function(){
+  const box=document.getElementById('baBox'), wrap=document.getElementById('baBeforeWrap'), handle=document.getElementById('baHandle'), img=document.getElementById('baBeforeImg');
+  let drag=false;
+  function move(clientX){ const r=box.getBoundingClientRect(); let p=((clientX-r.left)/r.width)*100; p=Math.max(5,Math.min(95,p)); wrap.style.width=p+'%'; handle.style.left=p+'%'; img.style.width=r.width+'px'; }
+  box.addEventListener('pointerdown',e=>{drag=true; move(e.clientX); box.setPointerCapture(e.pointerId);});
+  box.addEventListener('pointermove',e=>{if(drag) move(e.clientX);});
+  box.addEventListener('pointerup',()=>drag=false);
+  window.addEventListener('resize',()=>{img.style.width=box.getBoundingClientRect().width+'px';});
+  setTimeout(()=>{img.style.width=box.getBoundingClientRect().width+'px';},500);
+})();
+
+/* ---------- REVIEWS ---------- */
+function renderBars(){
+  const dist=[[5,68],[4,20],[3,7],[2,2],[1,3]];
+  document.getElementById('ratingBars').innerHTML=dist.map(([s,p])=>`<div class="flex items-center gap-2"><span class="w-3">${s}</span><div class="review-bar flex-1"><div style="width:${p}%"></div></div><span class="text-muted">${p}%</span></div>`).join('');
+}
+function renderReviews(){
+  document.getElementById('reviewTrack').innerHTML=reviews.map(r=>`
+    <div class="snap-start shrink-0 w-[300px] md:w-[360px] bg-panel border border-white/10 rounded-3xl p-5 flex flex-col">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-lime to-blaze flex items-center justify-center font-extrabold text-black">${r.n[0]}</div>
+      <div><div class="font-bold text-sm">${r.n}</div><div class="text-[11px] text-muted">${r.t} • Vijayanagar</div></div>
+      <span class="ml-auto text-[10px] bg-white/5 border border-white/10 px-2 py-1 rounded-full">✓ Verified</span></div>
+      <div class="stars text-sm mt-2">${'★'.repeat(r.s)}<span class="text-zinc-600">${'★'.repeat(5-r.s)}</span></div>
+      <p class="text-[13px] text-zinc-300 mt-2 leading-relaxed flex-1">“${r.x}”</p>
+      <div class="mt-3 flex items-center gap-3 text-[11px] text-muted"><button onclick="helpful(this)" class="chip rounded-full px-3 py-1.5 hover:text-lime"><i class="fa-regular fa-thumbs-up mr-1"></i>Helpful (<span>${r.h}</span>)</button><button onclick="sharePlace()" class="hover:text-lime"><i class="fa-solid fa-share-nodes"></i></button></div>
+    </div>`).join('');
+}
+renderBars(); renderReviews();
+function scrollReviews(d){document.getElementById('reviewTrack').scrollBy({left:d*380,behavior:'smooth'});}
+function helpful(btn){const s=btn.querySelector('span'); s.innerText=+s.innerText+1; btn.classList.add('!border-lime','!text-lime'); toast('Thanks for your feedback!');}
+
+/* review modal */
+let selStars=5;
+function openReviewModal(){document.getElementById('revModal').style.display='flex'; renderStarPick();}
+function closeReviewModal(){document.getElementById('revModal').style.display='none';}
+function renderStarPick(){document.getElementById('starPick').innerHTML=[1,2,3,4,5].map(i=>`<button onclick="selStars=${i};renderStarPick()" class="${i<=selStars?'text-lime':'text-zinc-700'}">★</button>`).join('');}
+function submitReview(){
+  const n=document.getElementById('rName').value||'You', x=document.getElementById('rText').value||'Great gym, spacious and motivating!';
+  reviews.unshift({n,t:'Just now',s:selStars,x,h:0}); renderReviews(); closeReviewModal(); toast('Review posted! Thank you ⭐');
+}
+
+/* ---------- BMI ---------- */
+document.getElementById('bmiRange').addEventListener('input',e=>document.getElementById('bmiW').value=e.target.value);
+function calcBMI(){
+  const h=+document.getElementById('bmiH').value/100, w=+document.getElementById('bmiW').value, age=+document.getElementById('bmiAge').value, goal=document.getElementById('bmiGoal').value;
+  if(!h||!w){toast('Enter height & weight');return;}
+  const bmi=(w/(h*h)); let cat=bmi<18.5?'Underweight':bmi<25?'Healthy':bmi<30?'Overweight':'Obese';
+  let col=bmi<25?'text-lime':bmi<30?'text-yellow-400':'text-blaze';
+  let weeks= goal==='Fat Loss'? Math.max(4,Math.round((w- (22*h*h))/0.6)) : goal==='Muscle Building'?12:8;
+  let plan= goal==='Fat Loss'?`Cut ~500 kcal/day + 4x HIIT/Strength + 10k steps. Target: <b>${(22*h*h).toFixed(1)} kg</b> in ~${weeks} weeks.` : goal==='Muscle Building'?`Surplus +300 kcal, 5x progressive strength, 1.8g protein/kg. Expect +4-6kg lean mass in 16 weeks.`:`Maintain + strength 4x/week + 1 conditioning day. Re-assess monthly.`;
+  document.getElementById('bmiOut').classList.remove('hidden');
+  document.getElementById('bmiOut').innerHTML=`<div class="flex items-center justify-between"><div><div class="text-[11px] tracking-widest text-muted font-bold">YOUR BMI</div><div class="font-display text-4xl ${col}">${bmi.toFixed(1)} <span class="text-sm text-white">• ${cat}</span></div></div><div class="text-right text-xs text-muted">Age ${age}<br>Goal: <b class="text-white">${goal}</b></div></div>
+  <div class="h-2 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-gradient-to-r from-lime to-blaze rounded-full" style="width:${Math.min(100,bmi/35*100)}%"></div></div>
+  <p class="text-[13px] text-zinc-300 mt-3 leading-relaxed">📋 Coach plan: ${plan}</p>
+  <button onclick="openBooking('Fitness Assessment')" class="btn-lime rounded-full px-5 py-2.5 mt-3 text-xs font-extrabold w-full">GET FREE IN-PERSON ASSESSMENT</button>`;
+  toast(`BMI ${bmi.toFixed(1)} — ${cat}`);
+}
+function claimAssessment(){
+  const p=document.getElementById('assessPhone').value;
+  if(!/^[0-9]{10}$/.test(p)){toast('Enter valid 10-digit mobile');return;}
+  toast('Assessment claimed! Coach will call you 📞'); openBooking('Fitness Assessment');
+}
+
+/* ---------- BOOKING ---------- */
+let modalSlot='6:30 PM';
+function openBooking(type){
+  document.getElementById('mType').innerText=type.toUpperCase();
+  document.getElementById('bookModal').style.display='flex';
+  const slots=['6:00 AM','8:00 AM','12:30 PM','4:30 PM','6:30 PM','8:00 PM'];
+  document.getElementById('slotGrid').innerHTML=slots.map((s,i)=>`<button onclick="pickSlot('${s}',this)" class="slot chip rounded-xl py-2 text-xs font-bold ${i===4?'tab-active':''}">${s}</button>`).join('');
+  document.getElementById('mSlotTxt').innerText='— '+modalSlot;
+}
+function pickSlot(s,btn){modalSlot=s; document.querySelectorAll('.slot').forEach(x=>x.classList.remove('tab-active')); btn.classList.add('tab-active'); document.getElementById('mSlotTxt').innerText='— '+s;}
+function closeBooking(){document.getElementById('bookModal').style.display='none';}
+function confirmModalBooking(){
+  const n=document.getElementById('mName').value.trim(), p=document.getElementById('mPhone').value.trim();
+  if(!n||!/^[0-9]{10}$/.test(p)){toast('Add name + 10-digit mobile');return;}
+  saveBooking(n,p,document.getElementById('mType').innerText,modalSlot);
+  closeBooking();
+}
+function submitBooking(e){
+  e.preventDefault();
+  const n=document.getElementById('fName').value.trim(), p=document.getElementById('fPhone').value.trim();
+  if(!n||!/^[0-9]{10}$/.test(p)){toast('Check name & 10-digit mobile');return;}
+  const d=document.getElementById('fDate').value||new Date().toISOString().slice(0,10);
+  saveBooking(n,p,document.getElementById('fType').value+' • '+document.getElementById('fGoal').value, document.getElementById('fTime').value+' • '+d);
+  e.target.reset();
+}
+function saveBooking(n,p,what,when){
+  const all=JSON.parse(localStorage.getItem('cf_bookings')||'[]');
+  const b={n,p,what,when,id:'CF-'+Math.floor(1000+Math.random()*9000)};
+  all.unshift(b); localStorage.setItem('cf_bookings',JSON.stringify(all));
+  showBookings(); toast(`Booked! ID ${b.id} — See you soon 💪`);
+  window.open(`https://wa.me/917406699917?text=${encodeURIComponent(`Hi! I'm ${n} (${p}). Booked ${what} at ${when}. ID ${b.id}`)}`,'_blank');
+}
+function showBookings(){
+  const all=JSON.parse(localStorage.getItem('cf_bookings')||'[]');
+  if(!all.length) return;
+  const box=document.getElementById('myBookings'); box.classList.remove('hidden');
+  box.innerHTML=`<div class="bg-lime/10 border border-lime/30 rounded-2xl p-4"><div class="font-extrabold text-sm text-lime">✓ YOUR APPOINTMENTS (${all.length})</div>`+all.slice(0,3).map(b=>`<div class="text-xs mt-2 text-zinc-300"><b class="text-white">${b.id}</b> • ${b.what} • ${b.when} • ${b.n}</div>`).join('')+`</div>`;
+}
+showBookings();
+(function(){const t=new Date(); t.setDate(t.getDate()+1); document.getElementById('fDate').min=new Date().toISOString().slice(0,10); document.getElementById('fDate').value=t.toISOString().slice(0,10);})();
+
+/* ---------- FAQ ---------- */
+document.getElementById('faq').innerHTML=faqs.map((f,i)=>`
+  <div class="acc border-b border-white/10 py-3 ${i===0?'acc-open':''}">
+    <button onclick="this.parentElement.classList.toggle('acc-open')" class="w-full flex items-center justify-between gap-3 text-left text-[13px] font-bold">${f[0]}<span class="acc-icon w-7 h-7 rounded-full chip flex items-center justify-center shrink-0">+</span></button>
+    <div class="acc-body"><p class="text-xs text-muted leading-relaxed pt-2 pr-6">${f[1]}</p></div>
+  </div>`).join('');
+
+/* ---------- VIDEO ---------- */
+document.getElementById('playBtn').onclick=function(){
+  const v=document.getElementById('tourVideo'); v.classList.remove('hidden'); v.play(); this.parentElement.style.display='none';
+};
+
+/* ---------- SHARE / SAVE / COPY ---------- */
+let saved=localStorage.getItem('cf_saved')==='1';
+function paintSave(){document.getElementById('saveTxt').innerText=saved?'Saved ✓':'Save';}
+paintSave();
+function toggleSave(){saved=!saved; localStorage.setItem('cf_saved',saved?'1':'0'); paintSave(); toast(saved?'Saved to your list ❤️':'Removed from saved');}
+async function sharePlace(){
+  const data={title:'Changeover Fitness Studio',text:'Best gym in Vijayanagar, Bengaluru — 4.5★ (395). Open till 10:30 PM!',url:location.href};
+  if(navigator.share){try{await navigator.share(data);}catch(e){}} else {await navigator.clipboard.writeText(location.href); toast('Link copied! Share with friends 🔗');}
+}
+function copyAddress(){navigator.clipboard.writeText('40/11, 2nd and 3rd Floor, RR Plaza, KHB Colony, 5th Main Road, Govindaraja Nagar, Vijayanagar, Bengaluru 560040'); toast('Address copied 📍');}
+
+/* ---------- TOAST ---------- */
+let toastT;
+function toast(msg){document.getElementById('toastTxt').innerText=msg; const t=document.getElementById('toast'); t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2600);}
+
+/* ---------- TILT ---------- */
+function attachTilt(){
+  document.querySelectorAll('.tilt').forEach(card=>{
+    card.onmousemove=e=>{const r=card.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5; card.style.transform=`perspective(900px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`;};
+    card.onmouseleave=()=>card.style.transform='';
+  });
+}
+attachTilt();
+
+/* ---------- PARTICLES ---------- */
+(function(){
+  const c=document.getElementById('particles'), ctx=c.getContext('2d'); let W,H,ps=[];
+  function rs(){W=c.width=c.offsetWidth; H=c.height=c.offsetHeight;}
+  rs(); window.addEventListener('resize',rs);
+  for(let i=0;i<60;i++) ps.push({x:Math.random(),y:Math.random(),s:Math.random()*2+0.5,v:Math.random()*0.0015+0.0005,o:Math.random()*0.6+0.2});
+  (function loop(){ctx.clearRect(0,0,W,H); ps.forEach(p=>{p.y-=p.v; if(p.y<0)p.y=1; ctx.beginPath(); ctx.arc(p.x*W,p.y*H,p.s,0,7); ctx.fillStyle=`rgba(214,255,42,${p.o})`; ctx.fill();}); requestAnimationFrame(loop);})();
+})();
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBooking(); closeReviewModal(); document.getElementById('lightbox').classList.remove('show');}});
+</script>
+</body>
+</html>
